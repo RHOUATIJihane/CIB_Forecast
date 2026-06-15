@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "name": "⚙️ Pipeline",
+      "path": "pipeline"
+    },
+    {
+      "name": "🧪 Expérimentation",
+      "path": "experimentation"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/pipeline/.venv/bin/python",
+    "python.analysis.extraPaths": ["${workspaceFolder}/pipeline/src"],
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true,
+      "**/.pytest_cache": true
+    },
+    "files.associations": {
+      "*.hql": "sql"
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "bierner.markdown-mermaid",
+      "mechatroner.rainbow-csv"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+category_id,category_label,metric_conditions,exp_source,exp_condition,exp_role,n_accounts_v6,champion_model,lift_med_champion_pct,lift_med_ridge,lift_med_rf,lift_med_lgbm,activate_externals,note
+E,E — Historique court,n_obs < 52 semaines,EXP1,C_short,calibration,84,lgbm,0.0,0.25,1.84,0.0,False,
+C,C — Tendance / choc de niveau,"n_obs ≥ 52 ET trend_strength ≥ 0,12",EXP2,C_level_shift_w70,calibration,84,rf,2.13,2.55,2.13,-0.95,False,
+B,B — Saisonnier fort,"seasonality_strength > 0,60 ET acf1 ≥ 0,30 ET cv < 1,0 ET trend < 0,50",EXP3,seasonal (account_type),calibration,0,rf,,,,,False,Peu de comptes en v6 — règle prudente par défaut
+A,A — Signal propre / régulier,"n_obs ≥ 52 ET CV < 0,45 ET reg_score ≥ 0,55",EXP1 + EXP3,A_clean + regular,calibration,84,rf,5.13,1.72,5.13,2.0,False,0 compte regular en v6 — seuil reg_score jamais atteint
+D1,D — Signal bruité,"n_obs ≥ 52 ET CV ≥ 0,50 ET trend < 0,12",EXP1,B_noisy,calibration,84,ridge,-0.37,-0.37,-0.23,1.28,False,
+D2,D — Irrégulier,"reg_score < 0,55 (après exclusions E, C, D3, F, A)",EXP3,irregular,calibration,120,ridge,5.25,5.25,-0.65,3.06,True,
+D3,D — Très sparse / volatile extrême,"CV > 1,0",EXP6,sparse,calibration,24,ridge,-2.11,-2.11,-0.77,-3.48,False,
+F,F — Quasi plat,"trend_strength < 0,02 ET CV < 0,40",EXP6,flat,calibration,24,lgbm,-0.62,-6.59,-1.53,-0.62,False,
+D0,D — Rupture calendaire (proxy),non détectable directement — flags calendaires via mapping sectoriel,EXP2,B_amplified_w70,calibration,84,rf,5.15,4.97,5.15,3.39,via mapping calendrier,Pas de bucket runtime ; calendrier dans externes si politique ON

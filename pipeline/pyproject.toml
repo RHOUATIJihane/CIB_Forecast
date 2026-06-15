@@ -1,0 +1,42 @@
+[project]
+name = "cib-forecast"
+version = "0.1.0"
+description = "Cashflow forecasting: Hive/HDFS, PySpark features, sklearn/LightGBM train (no H2O)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "findspark>=2.0.1",
+    "joblib>=1.3.0",
+    "numpy>=1.26.0",
+    "pandas>=2.1.0",
+    "pyspark==3.3.4",
+    "python-dotenv>=1.0.0",
+    "scikit-learn>=1.4.0",
+    "scipy>=1.11.0",
+    "statsmodels>=0.14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+]
+airflow = [
+    "apache-airflow>=2.8.0",
+    "apache-airflow-providers-apache-spark>=4.8.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["src", "src.common", "src.datagen", "src.ml", "src.macro_scraper"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

@@ -1,0 +1,7 @@
+sector,sector_label,macro_primary,macro_secondary,include_calendar,priority,source
+agriculture,Agriculture,commodity_index_z,,true,1,pfe_synthetic
+transport,Transport,oil_price_z,,true,2,pfe_synthetic
+investment,Investissement,masi_index_z,,true,3,pfe_synthetic
+construction,Construction BTP,realestate_index_z,oil_price_z,true,4,pfe_synthetic
+mixed,Mixte,masi_index_z,oil_price_z,true,5,pfe_synthetic
+retail,Commerce detail,,,true,6,pfe_synthetic

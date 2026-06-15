@@ -1,0 +1,9 @@
+account_category,activate_externals,champion_model,policy_rule_id,source_exp,lift_med_champion_pct,n_accounts_v6,policy_source
+E_short_history,False,lgbm,E_short,EXP1_C_short,0.0,84,v7_encapsulated
+D_noisy,False,ridge,D_noisy,EXP1_B_noisy,-0.37,84,v7_encapsulated
+B_seasonal,False,lgbm,B_seasonal,EXP3_seasonal,-0.54,22,v7_encapsulated
+D_sparse,False,ridge,D_sparse,EXP6_sparse,-2.11,24,v7_encapsulated
+F_flat,False,rf,F_flat,EXP6_flat,-1.53,24,v7_encapsulated
+C_trending,False,rf,C_trending,EXP2_C_level_shift,2.13,84,v7_encapsulated
+A_regular_stable,True,rf,A_regular,EXP1_A_clean,5.13,84,v7_encapsulated
+D_irregular,True,ridge,D_irregular,EXP3_irregular,5.25,120,v7_encapsulated
