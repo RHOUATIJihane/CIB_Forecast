@@ -495,9 +495,3 @@ print(audit.pivot_table(index="external_name", columns="sector", values="pct_sel
 
 ---
 
-## Notes de design
-
-- **Polars** est utilisé dans le pipeline de filtrage (Steps 1–8) pour la performance sur grandes tables, tandis que **Pandas** est utilisé dans la génération et l'analyse.
-- Le **Step 7** a été délibérément transformé de filtre (exclusion) en tagger (profilage) pour permettre l'analyse des comptes difficiles sans les éliminer du benchmark.
-- La **sélection des externes** force toujours l'inclusion des flags calendaires (`is_*`), car leur pertinence est universelle et leur coût de calcul nul.
-- Les expériences 1–4 et 6–7 ont le rôle `calibration` ; l'expérience 5 a le rôle `validation` (test de causalité).
