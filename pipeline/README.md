@@ -1,4 +1,4 @@
-# 📊 Pipeline CIB Forecast
+#  Pipeline CIB Forecast
 
 **Chaîne de prévision de flux de trésorerie** : CSV → HDFS → Hive → PySpark → ML (sklearn/LightGBM) → Airflow
 
@@ -6,7 +6,7 @@ Prévisions de trésorerie client à horizon H+1 utilisant des données macroéc
 
 ---
 
-## 🎯 Objectif du projet
+##  Objectif du projet
 
 Ce pipeline prédit le **flux de trésorerie (CIB) par compte client** pour l'horizon suivant, en s'appuyant sur :
 - **Données transactionnelles** : comportement historique du client
@@ -16,7 +16,7 @@ Ce pipeline prédit le **flux de trésorerie (CIB) par compte client** pour l'ho
 
 ---
 
-## 🏗️ Architecture Médaillon
+##  Architecture Médaillon
 
 | Couche | Description | Tables | Job |
 |--------|-------------|--------|-----|
@@ -27,7 +27,7 @@ Ce pipeline prédit le **flux de trésorerie (CIB) par compte client** pour l'ho
 
 ---
 
-## 📋 Pré-requis
+##  Pré-requis
 
 - **Python** ≥ 3.10
 - **Spark** 3.3.4 (avec PySpark)
@@ -44,7 +44,7 @@ findspark, pyspark==3.3.4, pandas, scikit-learn, lightgbm
 
 ---
 
-## 🚀 Démarrage rapide
+##  Démarrage rapide
 
 ### 1. Installation initiale
 
@@ -89,7 +89,7 @@ pytest -q
 
 ---
 
-## 🔄 Exécution du Pipeline
+##  Exécution du Pipeline
 
 ### **Option A : Étapes individuelles**
 
@@ -133,7 +133,7 @@ pytest -q
 
 ---
 
-## 🌬️ Orchestration Airflow
+##  Orchestration Airflow
 
 ### Installation & Configuration
 
@@ -203,7 +203,7 @@ source scripts/airflow_env.sh
 
 ---
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 pipeline/
@@ -274,7 +274,7 @@ pipeline/
 
 ---
 
-## 📚 Commandes disponibles
+##  Commandes disponibles
 
 ```bash
 ./run.sh init-hive          # Initialiser schémas Hive
@@ -293,7 +293,7 @@ pipeline/
 
 ---
 
-## 🧪 Tester localement
+##  Tester localement
 
 ```bash
 # Sans HDFS/Hive requis
@@ -308,7 +308,7 @@ pytest -v tests/
 
 ---
 
-## ⚙️ Configuration avancée
+##  Configuration avancée
 
 ### Variables d'environnement
 
@@ -334,7 +334,7 @@ SPARK_SUBMIT_OPTS="--master yarn --deploy-mode client" ./run.sh features
 
 ---
 
-## 📖 Documentation additionnelle
+##  Documentation additionnelle
 
 - [Architecture détaillée](docs/architecture.md) : diagrammes, schémas, transformations
 - [Plan de scraping](docs/scraping_plan.md) : source des données macro
@@ -342,7 +342,7 @@ SPARK_SUBMIT_OPTS="--master yarn --deploy-mode client" ./run.sh features
 
 ---
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 
 ### Erreur : `JAVA_HOME not found`
 ```bash
@@ -369,7 +369,7 @@ macro_source = synthetic
 
 ---
 
-## 👤 Contact & Support
+##  Contact & Support
 
 Voir le fichier [docs/architecture.md](docs/architecture.md) pour les contacts de l'équipe et les questions techniques.
 
