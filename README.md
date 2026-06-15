@@ -1,4 +1,4 @@
-# CIB Forecast Soutenance
+# CIB Forecast 
 
 Projet global de prevision de cashflow CIB organise en deux parties:
 - `pipeline/`: industrialisation data + ML (HDFS, Hive, Spark, train, inference, Airflow)
